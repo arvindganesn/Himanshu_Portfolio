@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Himanshu Hansaria | Machine Learning Engineer &amp; AI Engineer</title>
+  <meta name="description" content="Himanshu Hansaria is an AI/ML Engineer with 8+ years of experience building production GenAI agents, forecasting platforms, and computer vision systems. NeurIPS '23 Spotlight author." />
+  <meta name="theme-color" content="#0b0d17" />
+  <meta property="og:title" content="Himanshu Hansaria | ML Engineer &amp; AI Engineer" />
+  <meta property="og:description" content="Production GenAI agents, large-scale forecasting, and research-grade deep learning." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%236ee7f9'/><stop offset='1' stop-color='%23a78bfa'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%230b0d17'/><text x='50' y='68' font-size='54' font-family='Arial' font-weight='700' text-anchor='middle' fill='url(%23g)'>HH</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="glow glow-1" aria-hidden="true"></div>
+  <div class="glow glow-2" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a href="#home" class="brand" aria-label="Home"><span>HH</span></a>
+    <nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false"><i></i><i></i><i></i></button>
+      <ul id="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle light/dark theme">
+      <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <span class="pill reveal"><span class="dot"></span> Open to impactful AI/ML opportunities</span>
+          <h1 class="reveal">Hi, I'm <span class="grad">Himanshu Hansaria</span></h1>
+          <p class="role reveal"><span id="typed"></span><span class="caret">|</span></p>
+          <p class="lead reveal">
+            I build production-grade AI systems &mdash; multi-agent platforms, RAG assistants, and forecasting
+            pipelines at 20,000+ SKU scale &mdash; and publish research that made the top ~3% at NeurIPS '23.
+          </p>
+          <div class="cta reveal">
+            <a href="#projects" class="btn primary">View my work
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="HimanshuHansaria_AIEMLE.pdf" class="btn ghost" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+              Download Résumé
+            </a>
+          </div>
+          <div class="socials reveal">
+            <a href="mailto:Himanshu.hansaria@gmail.com" aria-label="Email" title="Email">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/himanshuhansaria" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11.5H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.84-2.06 3.8-2.06 4.06 0 4.8 2.67 4.8 6.14v5.82h-4v-5.16c0-1.23-.02-2.82-1.72-2.82-1.72 0-1.98 1.34-1.98 2.73v5.25h-4z"/></svg>
+            </a>
+            <a href="https://github.com/mrsterius" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a10.9 10.9 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.15v3.18c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-card reveal" aria-label="Highlights">
+          <div class="code-head"><i></i><i></i><i></i><span>himanshu.py</span></div>
+          <pre><code><span class="c">#!/usr/bin/env python</span>
+<span class="k">class</span> <span class="t">Himanshu</span>:
+    role   = <span class="s">"AI / ML Engineer"</span>
+    years  = <span class="n">8</span>
+    based  = <span class="s">"New York, NY"</span>
+    stack  = [<span class="s">"PyTorch"</span>, <span class="s">"LangChain"</span>,
+              <span class="s">"Databricks"</span>, <span class="s">"FastAPI"</span>]
+    focus  = [<span class="s">"Agentic AI"</span>, <span class="s">"RAG"</span>,
+              <span class="s">"Forecasting"</span>, <span class="s">"CV"</span>]
+    paper  = <span class="s">"NeurIPS '23 (Spotlight)"</span>
+
+    <span class="k">def</span> <span class="f">ship</span>(self, idea):
+        <span class="k">return</span> self.<span class="f">productionize</span>(idea)</code></pre>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat reveal"><b data-count="8" data-suffix="+">0</b><span>Years of experience</span></div>
+        <div class="stat reveal"><b data-count="20000" data-suffix="+">0</b><span>SKUs forecast &amp; monitored</span></div>
+        <div class="stat reveal"><b data-count="2000" data-suffix="+">0</b><span>Stores served</span></div>
+        <div class="stat reveal"><b data-count="3" data-prefix="Top ~" data-suffix="%">0</b><span>NeurIPS '23 Spotlight</span></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">01 &mdash; About</span>
+          <h2>From research labs to production at scale</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm an AI/ML Engineer with 8+ years of experience across research, finance, and retail. I design
+              and ship production-ready AI systems &mdash; GenAI agents, computer vision solutions, and
+              end-to-end ML pipelines &mdash; with measurable impact on accuracy, efficiency, and business decisions.
+            </p>
+            <p>
+              My work ranges from time-series forecasting at 20K+ SKU scale and LLM-powered explainability to
+              RAG-powered agents and multi-GPU self-supervised learning. I'm hands-on with LangChain, Databricks,
+              and PyTorch, and care deeply about deployment, monitoring, and governance.
+            </p>
+            <p>
+              I hold an M.S. in Data Science from Indiana University Bloomington and an M.Sc. Physics &amp;
+              B.E. Manufacturing from BITS Pilani.
+            </p>
+          </div>
+          <div class="about-cards">
+            <div class="mini-card reveal">
+              <div class="ico">🧠</div>
+              <h3>Agentic AI</h3>
+              <p>Supervisor &amp; tool-calling multi-agent systems with guardrails and observability.</p>
+            </div>
+            <div class="mini-card reveal">
+              <div class="ico">📈</div>
+              <h3>Forecasting</h3>
+              <p>Store-item demand forecasting with XGBoost, LightGBM, PatchTST &amp; Chronos.</p>
+            </div>
+            <div class="mini-card reveal">
+              <div class="ico">🔬</div>
+              <h3>Research</h3>
+              <p>Self-supervised vision models, ViTs &amp; VideoMAE on multi-GPU infrastructure.</p>
+            </div>
+            <div class="mini-card reveal">
+              <div class="ico">⚙️</div>
+              <h3>MLOps</h3>
+              <p>Databricks, MLflow, CI/CD, drift detection, and model monitoring at scale.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">02 &mdash; Experience</span>
+          <h2>Where I've made an impact</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="job reveal">
+            <div class="job-dot"></div>
+            <div class="job-card">
+              <header>
+                <div>
+                  <h3>AI Engineer</h3>
+                  <p class="company">eClerx <span>&middot; New York City Metropolitan Area, NY</span></p>
+                </div>
+                <span class="date">Aug 2026 &ndash; Present</span>
+              </header>
+              <ul>
+                <li>Architected an end-to-end <strong>lead intelligence platform</strong> using Python, FastAPI, TypeScript, exchangelib (EWS), and the OpenAI Agents SDK to ingest enterprise mailbox data, reconstruct multi-party conversation threads, and run parallelized LLM pipelines producing structured JSON summaries, lead scores (0&ndash;10) with rationale, and actionable follow-ups.</li>
+                <li>Developed an <strong>AI-driven leads discovery platform</strong> with specialized agents that ingest SEC revenue data, classify thousands of target accounts, retrieve earnings-call transcripts via quota-aware caching, extract pain points and initiatives, and validate signals against verbatim source quotes; built a React dashboard and News-Alerts-compatible exports for auditable sales prioritization.</li>
+              </ul>
+              <div class="tags"><span>Python</span><span>FastAPI</span><span>TypeScript</span><span>React</span><span>OpenAI Agents</span><span>LLM Pipelines</span></div>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job-dot"></div>
+            <div class="job-card">
+              <header>
+                <div>
+                  <h3>Machine Learning Engineer <small>(Contract)</small></h3>
+                  <p class="company">Five Below <span>&middot; Philadelphia, PA</span></p>
+                </div>
+                <span class="date">Jun 2024 &ndash; Present</span>
+              </header>
+              <ul>
+                <li>Architected a production-grade <strong>multi-agent inventory intelligence platform</strong> on Databricks serving 20,000+ SKUs across 2,000 stores; a Supervisor Agent orchestrates tool-calling agents across Location Intelligence, Product Intelligence, and Out-of-Stock Detection Genie spaces to predict stockouts, quantify impact, and recommend redistribution, replenishment, and allocation &mdash; surfaced via Streamlit to help mitigate millions of dollars in potential weekly sales loss.</li>
+                <li>Built an <strong>LLM-powered explainability layer</strong> using Meta Llama 3.3 70B that combines SHAP attribution with prompt engineering and controlled generation to explain XGBoost and ensemble predictions, with guardrails, tracing, and automated evaluation.</li>
+                <li>Productionized an enterprise <strong>8-week store-item demand forecasting platform</strong> on Databricks with PySpark, LightGBM, Delta Lake, and Unity Catalog.</li>
+                <li>Benchmarked ARIMA, Prophet, XGBoost, PatchTST, and Chronos for 30-day store-day forecasts across 2,000+ stores &mdash; XGBoost delivered a <strong>15&ndash;20% accuracy improvement</strong> over the incumbent Random Forest.</li>
+                <li>Shipped an XGBoost + Random Forest <strong>Voting Regressor</strong> with an additional <strong>10% RMSE reduction</strong> and better regional stability.</li>
+                <li>Engineered an LLM-based <strong>Weather Intelligence</strong> layer that turns weather-pattern distributions into natural-language demand signals, delivered via Power BI.</li>
+                <li>Created a rolling-window backtesting framework and a <strong>drift-detection monitoring</strong> system to drive proactive retraining and sustained forecast reliability.</li>
+              </ul>
+              <div class="tags"><span>Databricks</span><span>PySpark</span><span>LightGBM</span><span>XGBoost</span><span>Delta Lake</span><span>Llama 3.3</span><span>SHAP</span><span>Streamlit</span><span>Power BI</span></div>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job-dot"></div>
+            <div class="job-card">
+              <header>
+                <div>
+                  <h3>Research Assistant &ndash; Machine Learning</h3>
+                  <p class="company">Indiana University <span>&middot; Bloomington, IN</span></p>
+                </div>
+                <span class="date">Feb 2023 &ndash; Jun 2024</span>
+              </header>
+              <ul>
+                <li>Researched <strong>biologically inspired representation learning</strong> &mdash; pre-training and fine-tuning generative, contrastive, predictive, and masked self-supervised models (VideoMAE, Vision Transformers) with PyTorch, Hugging Face, and distributed multi-GPU infrastructure; showed that nature-inspired curriculum learning improves representation quality and accelerates ViT convergence.</li>
+                <li>Co-authored a paper accepted at <strong>NeurIPS '23 (Spotlight)</strong> &mdash; top ~3% of submissions. <a class="inline-link" href="https://github.com/ssheybani/baby-vision-curriculum" target="_blank" rel="noopener">GitHub &#8599;</a></li>
+                <li>Associate Instructor for <em>Elements of AI</em> (Fall '22) and <em>Introduction to AI</em> (Spring '23), mentoring 100+ students.</li>
+              </ul>
+              <div class="tags"><span>PyTorch</span><span>Hugging Face</span><span>ViT</span><span>VideoMAE</span><span>Multi-GPU</span><span>Self-Supervised</span></div>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job-dot"></div>
+            <div class="job-card">
+              <header>
+                <div>
+                  <h3>Software Engineer</h3>
+                  <p class="company">Google Summer of Code &middot; Apache Software Foundation <span>&middot; USA</span></p>
+                </div>
+                <span class="date">Jun 2022 &ndash; Sep 2022</span>
+              </header>
+              <ul>
+                <li>Built a full-stack <strong>collaborative notebook platform</strong> as a next-gen alternative to JupyterHub using React, Flask, and MySQL &mdash; real-time state sync, shared kernels, multi-user collaboration, and production-grade REST APIs with isolated, reproducible compute sessions.</li>
+                <li>Designed a custom <strong>Slurm job spawner</strong> to launch Jupyter Notebooks in Docker containers for scalable HPC-backed interactive compute.</li>
+              </ul>
+              <div class="tags"><span>React</span><span>Flask</span><span>MySQL</span><span>Docker</span><span>Slurm</span></div>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job-dot"></div>
+            <div class="job-card">
+              <header>
+                <div>
+                  <h3>Machine Learning Engineer</h3>
+                  <p class="company">Infostreamz Pvt Ltd <span>&middot; Delhi, India</span></p>
+                </div>
+                <span class="date">Jun 2019 &ndash; Mar 2021</span>
+              </header>
+              <ul>
+                <li>Deployed a real-time <strong>COVID-19 mask-compliance</strong> computer vision system with OpenCV, TensorFlow, Keras, and JavaScript &mdash; <strong>93% accuracy</strong> with automated alerting over live video-stream inference.</li>
+              </ul>
+              <div class="tags"><span>OpenCV</span><span>TensorFlow</span><span>Keras</span><span>JavaScript</span></div>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job-dot"></div>
+            <div class="job-card">
+              <header>
+                <div>
+                  <h3>Software Engineer (Machine Learning)</h3>
+                  <p class="company">HSBC <span>&middot; Pune, India</span></p>
+                </div>
+                <span class="date">Jun 2016 &ndash; Apr 2019</span>
+              </header>
+              <ul>
+                <li>Built a time-series <strong>Roster Automation</strong> algorithm and tool in R that improved Global Help Desk staffing efficiency by <strong>70%</strong>.</li>
+                <li>Delivered a <strong>Customer Segmentation</strong> dashboard (Python, JavaScript) driving a <strong>40% increase</strong> in product uptake.</li>
+                <li>Automated <strong>KYC</strong> using Distributed Ledger Technology, Google Cloud Vision API, and Face++, cutting manual review time and improving auditability.</li>
+              </ul>
+              <div class="tags"><span>R</span><span>Python</span><span>Time Series</span><span>Cloud Vision</span><span>DLT</span></div>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job-dot"></div>
+            <div class="job-card">
+              <header>
+                <div>
+                  <h3>Image Processing Engineer</h3>
+                  <p class="company">Housing.com <span>&middot; Mumbai, India</span></p>
+                </div>
+                <span class="date">May 2014 &ndash; Jul 2014</span>
+              </header>
+              <ul>
+                <li>Automated generation of <strong>3D architectural models from 2D floor plans</strong> using OpenCV and C++, reducing manual modeling time for real estate listings. <a class="inline-link" href="https://github.com/Mrsterius/2dto3d" target="_blank" rel="noopener">GitHub &#8599;</a></li>
+              </ul>
+              <div class="tags"><span>OpenCV</span><span>C++</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">03 &mdash; Skills</span>
+          <h2>Toolbox</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h3>Languages</h3>
+            <div class="chips"><span>Python</span><span>JavaScript</span><span>SQL</span><span>R</span><span>C/C++</span><span>Java</span><span>C#</span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3>AI / ML Frameworks</h3>
+            <div class="chips"><span>PyTorch</span><span>TensorFlow</span><span>Keras</span><span>Hugging Face</span><span>scikit-learn</span><span>XGBoost</span><span>LightGBM</span><span>LangChain</span><span>OpenAI API</span><span>OpenCV</span><span>NLTK</span><span>SpaCy</span><span>ARIMA</span><span>Prophet</span><span>PatchTST</span><span>Chronos</span></div>
+          </div>
+          <div class="skill-card wide reveal">
+            <h3>Core Competencies</h3>
+            <div class="chips"><span>LLMs</span><span>RAG</span><span>Agentic AI</span><span>Tool-Calling</span><span>Multi-Agent Systems</span><span>LLM&ndash;API Integration</span><span>Prompt Engineering</span><span>LLM Evaluation &amp; Observability</span><span>AI Guardrails &amp; Security</span><span>Fine-tuning</span><span>Feature Engineering</span><span>Time-Series Forecasting</span><span>Hyperparameter Tuning</span><span>Distributed Training</span><span>Computer Vision</span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3>MLOps &amp; Cloud</h3>
+            <div class="chips"><span>Azure Databricks</span><span>GCP Vertex AI</span><span>MLflow</span><span>Apache Flink</span><span>CI/CD for ML</span><span>Model Monitoring</span><span>Pipeline Automation</span><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3>APIs &amp; Backend</h3>
+            <div class="chips"><span>FastAPI</span><span>Flask</span><span>REST APIs</span><span>Docker</span><span>React</span><span>React Native</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">04 &mdash; Projects</span>
+          <h2>Things I've built</h2>
+        </div>
+        <div class="projects-grid">
+          <article class="project featured reveal">
+            <div class="p-top"><span class="badge">Featured</span><span class="p-ico">🕉️</span></div>
+            <h3>KrishnaGPT &ndash; Vedic RAG Assistant</h3>
+            <p>Production-grade Retrieval-Augmented Generation assistant delivering semantic search and source-grounded Q&amp;A across the Bhagavad Gita and other Vedic scriptures.</p>
+            <ul>
+              <li>End-to-end ingestion pipeline: Unstructured, recursive chunking, metadata enrichment, semantic embeddings &mdash; chapter- and verse-level retrieval with citations.</li>
+              <li>Evaluation &amp; observability for retrieval relevance, faithfulness, latency, and hallucination rate.</li>
+            </ul>
+            <div class="tags"><span>Python</span><span>Flask</span><span>ChromaDB</span><span>LLMs</span><span>RAG</span></div>
+          </article>
+
+          <article class="project reveal">
+            <div class="p-top"><span class="p-ico">🤖</span><a class="gh" href="https://github.com/Mrsterius/NotesOrganizationAgent" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub &#8599;</a></div>
+            <h3>Notes Organization AI Agent</h3>
+            <p>Agentic ReAct agent built with LangChain that autonomously reasons, plans, and executes document-management workflows.</p>
+            <ul>
+              <li>Dynamic tool orchestration and function-calling over the Google Docs API and macOS Notes API for categorization and tagging.</li>
+            </ul>
+            <div class="tags"><span>LangChain</span><span>ReAct</span><span>Function Calling</span></div>
+          </article>
+
+          <article class="project reveal">
+            <div class="p-top"><span class="p-ico">🧩</span><a class="gh" href="https://github.com/Mrsterius/SkillsParserJobMatching" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub &#8599;</a></div>
+            <h3>NLP Job Matching Skills Parser</h3>
+            <p>Flask-based NLP pipeline using OpenAI APIs and MongoDB to extract, normalize, and classify hard and soft skills from unstructured job descriptions for taxonomy-driven candidate&ndash;job matching.</p>
+            <div class="tags"><span>Flask</span><span>OpenAI</span><span>MongoDB</span><span>NLP</span></div>
+          </article>
+
+          <article class="project reveal">
+            <div class="p-top"><span class="p-ico">👥</span><a class="gh" href="https://github.com/Mrsterius/AI/tree/master/hhansar-a1-master/part3" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub &#8599;</a></div>
+            <h3>AI-Based Team Preference Alignment</h3>
+            <p>Local search&ndash;based optimization engine that assigns students to teams by satisfying teammate preferences and avoidance constraints while minimizing a weighted cost function.</p>
+            <div class="tags"><span>Local Search</span><span>Optimization</span><span>AI</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH & ACHIEVEMENTS -->
+    <section id="research" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">05 &mdash; Research &amp; Recognition</span>
+          <h2>Achievements &amp; education</h2>
+        </div>
+        <div class="two-col">
+          <div class="feature-card reveal">
+            <span class="badge">NeurIPS '23 &middot; Spotlight</span>
+            <h3>Biologically inspired vision priors in deep learning</h3>
+            <p>Co-authored a spotlight paper &mdash; representing the top ~3% of accepted submissions at one of AI's most competitive venues &mdash; showing that nature-inspired curriculum learning improves representation quality and accelerates Vision Transformer convergence.</p>
+            <div class="tags"><span>Self-Supervised Learning</span><span>Vision Transformers</span><span>Curriculum Learning</span></div>
+            <a class="gh" style="align-self:flex-start" href="https://github.com/ssheybani/baby-vision-curriculum" target="_blank" rel="noopener">View code on GitHub &#8599;</a>
+          </div>
+          <div class="ach-list reveal">
+            <div class="ach"><span>🏆</span><p><b>NeurIPS 2023 Spotlight Paper</b><br />Top ~3% of accepted submissions.</p></div>
+            <div class="ach"><span>🤖</span><p><b>Robocup Iran Open</b><br />Represented India in Humanoid Robotics &mdash; R&amp;D in bipedal locomotion.</p></div>
+            <div class="ach"><span>🥇</span><p><b>Best Technology Project Awardee</b><br />2 consecutive years (2011&ndash;2013) at APOGEE, BITS Pilani.</p></div>
+          </div>
+        </div>
+
+        <div class="edu reveal">
+          <div class="edu-card">
+            <span class="eyebrow">Education</span>
+            <h3>Indiana University, Bloomington, IN</h3>
+            <p>M.S. Data Science</p>
+            <small>Aug 2021 &ndash; May 2023</small>
+          </div>
+          <div class="edu-card">
+            <span class="eyebrow">Education</span>
+            <h3>BITS Pilani, India</h3>
+            <p>M.Sc. Physics &amp; B.E. Manufacturing</p>
+            <small>Aug 2011 &ndash; May 2016</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <div class="contact-card reveal">
+          <span class="eyebrow">06 &mdash; Contact</span>
+          <h2>Let's build something intelligent</h2>
+          <p>Have a project, role, or research idea in mind? I'd love to hear about it.</p>
+          <div class="contact-actions">
+            <a href="mailto:Himanshu.hansaria@gmail.com" class="btn primary">Himanshu.hansaria@gmail.com</a>
+            <a href="tel:+18123498278" class="btn ghost">+1 (812) 349-8278</a>
+          </div>
+          <p class="loc">📍 New York City Metropolitan Area, NY</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <p>&copy; <span id="year"></span> Himanshu Hansaria. All rights reserved.</p>
+      <a href="#home">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
